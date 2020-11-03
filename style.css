@@ -129,7 +129,6 @@ h3 img {
 }
 
 .bl_howto_main {
-	padding-right: 30px;
 	margin-top: 100px;
 }
 
@@ -214,7 +213,7 @@ ul {
 
 h3 img {
 	width: 20px;
-	padding: 20px;
+	padding: 0 30px;
 }
 
 
@@ -243,14 +242,11 @@ h3 img {
 	padding-left: 40px !important;
 }
 
-.hp_margin_l {
-	margin-left: 40px !important;  
-}
-
 .ly_header_ttl img {
 	padding-top: 400px;
 	width: 300px;
 }
+
 
 /*================================================
 ボディ
