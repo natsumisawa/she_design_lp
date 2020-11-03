@@ -11,23 +11,23 @@ body {
 	line-height: 30px;
 }
 
-body h2 {
+h2 {
 	font-size: 2.5rem;
 	letter-spacing: .1em;
 	line-height: 80px;
 }
 
-body h3 {
+h3 {
 	font-size: 2rem;
 	letter-spacing: .1em;
 	line-height: 40px;	
 }
 
-body li {
+li {
 	margin-bottom: 20px;
 }
 
-body ul {
+ul {
 	margin-bottom: 40px;	
 }
 
@@ -77,16 +77,16 @@ body ul {
 	text-align: center;
 }
 
-.hp_right_justify {
+.hp_img_right_justify {
 	border-radius: 20px 0 0 20px;
 	width: 50%;
   	min-width: 0; // 横にはみ出ないようにする
 }
 
-.hp_left_justify {
+.hp_img_left_justify {
 	border-radius: 0 20px 20px 0;
 	width: 50%;
-  	min-width: 0; // 横にはみ出ないようにする
+  	min-width: 0;
 }
 
 .hp_padding_r {
@@ -95,6 +95,10 @@ body ul {
 
 .hp_padding_l {
 	padding-left: 50px !important;
+}
+
+.hp_line_height_s {
+	line-height: 20px;
 }
 
 /* ================================================ */
@@ -118,22 +122,9 @@ body ul {
 	margin-bottom: 50px;
 }
 
-.bl_howto_main_ttl li {
-	margin-bottom: 20px;
-}
-
-.bl_howto_main_cont li {
-	margin-bottom: 20px;
-}
-
 .bl_check_point {
 	display: flex;
-	justify-content: space-between;
-}
-
-.bl_check_point p {
-	vertical-align: middle;
-	line-height: 20px;
+	justify-content: flex-start;
 }
 
 .el_check {
