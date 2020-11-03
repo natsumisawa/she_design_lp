@@ -7,7 +7,6 @@ body {
 	background-color:#ffffff;
 	font-family:  YuGothic,'Yu Gothic', Osaka, sans-serif, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
 	letter-spacing: .2em;
-	letter-spacing: .2em;
 	line-height: 30px;
 }
 
@@ -31,25 +30,30 @@ ul {
 	margin-bottom: 40px;	
 }
 
+h3 img {
+	width: 25px;
+	padding: 0 60px;
+}
+
 /* ================================================ */
 /*ヘッダー
 /* ================================================ */
 
 .ly_header {
 	padding: 30px;
-	height: 500px;
+	height: 80vh;
 	background-image: url("images/top_kv_pc_01.jpg");
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .ly_header_ttl {
-	height: 220px;
-	width: 500px;
-	padding-top: 200px;
+	width: 100%;
+	height: 90vh;
 }
 
 .ly_header_ttl img {
+	padding-top: 200px;
 	width: 400px;
 }
 
@@ -67,7 +71,6 @@ ul {
 /* ================================================ */
 .ly_cont_wrapper {
 	margin-top: 200px;
-	height: 600px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -77,15 +80,17 @@ ul {
 	text-align: center;
 }
 
-.hp_img_right_justify {
+.el_right_fit_img {
 	border-radius: 20px 0 0 20px;
-	width: 50%;
-  	min-width: 0; // 横にはみ出ないようにする
+	height: 100vh;
+	width: 100%;
+  	min-width: 0; /* 横にはみ出ないようにする*/
 }
 
-.hp_img_left_justify {
+.el_left_fit_img {
 	border-radius: 0 20px 20px 0;
-	width: 50%;
+	height: 100vh;
+	width: 100%;
   	min-width: 0;
 }
 
@@ -113,9 +118,19 @@ ul {
 	margin-bottom: 35px;
 }
 
+.bl_howto {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bl_howto_1 {
+	flex-flow: row-reverse;
+}
+
 .bl_howto_main {
+	padding-right: 30px;
 	margin-top: 100px;
-	margin-left: 50px;
 }
 
 .bl_howto_main_ttl {
@@ -164,4 +179,114 @@ ul {
 	height: 100px;
 	margin-top: 200px;
 	padding: 100px;
+}
+
+
+/*================================================
+Tablet : 画面の横幅が768pxまで
+==================================================*/
+@media screen and (max-width: 768px){
+
+body {
+	letter-spacing: .1em;
+	line-height: 25px;
+}
+
+h2 {
+	font-size: 2rem;
+	letter-spacing: .1em;
+	line-height: 50px;
+}
+
+h3 {
+	font-size: 1.5rem;
+	letter-spacing: .1em;
+	line-height: 40px;	
+}
+
+li {
+	margin-bottom: 15px;
+}
+
+ul {
+	margin-bottom: 30px;	
+}
+
+h3 img {
+	width: 20px;
+	padding: 20px;
+}
+
+
+/*================================================
+レイアウト、ヘルパー
+==================================================*/
+
+.ly_header {
+	/*paddingしてwidth100%するとpadding分ずれちゃう・・・！*/
+	padding: 30px;
+	height: 100vh;
+	background-image: url("images/top_kv_pc_01.jpg");
+	background-size: cover; /*めいいっぱいに表示*/
+	background-position: center;
+}
+
+.ly_cont_wrapper {
+	margin-top: 90px;
+}
+
+.hp_padding_r {
+	padding-right: 40px !important;
+}
+
+.hp_padding_l {
+	padding-left: 40px !important;
+}
+
+.hp_margin_l {
+	margin-left: 40px !important;  
+}
+
+.ly_header_ttl img {
+	padding-top: 400px;
+	width: 300px;
+}
+
+/*================================================
+ボディ
+==================================================*/
+
+.bl_howto_main {
+	margin-top: 40px;
+}
+
+.el_right_fit_img {
+	border-radius: 20px 0 0 20px;
+    height: 30vh;
+    min-width: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.el_left_fit_img {
+	border-radius: 0 20px 20px 0;
+	height: 350px;
+	width: 65vh;
+    min-width: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tb_step1_img {
+	display: none;
+}
+
+.bl_howto {
+	display: block;
+}
+
+.tb_step1_img {
+	display: none;
+}
+
 }
