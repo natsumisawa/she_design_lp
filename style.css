@@ -1,0 +1,136 @@
+﻿@charset UTF-8;
+/* ================================================ */
+/*               全体設定                */
+/* ================================================ */
+
+body {
+	background-color:#ffffff;
+	font-family:  YuGothic,'Yu Gothic', Osaka, sans-serif, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+	letter-spacing: .2em;
+	letter-spacing: .2em;
+	line-height: 30px;
+}
+
+body h2 {
+	font-size: 2.5rem;
+	letter-spacing: .1em;
+	line-height: 80px;
+}
+
+body h3 {
+	font-size: 2rem;
+}
+
+body li {
+	margin-bottom: 20px;
+}
+
+/* ================================================ */
+/*ヘッダー
+/* ================================================ */
+
+.ly_header {
+	padding: 30px;
+	height: 500px;
+	background-image: url("images/top_kv_pc_01.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ly_header_ttl {
+	height: 220px;
+	width: 500px;
+	padding-top: 200px;
+}
+
+.ly_header_ttl img {
+	width: 400px;
+}
+
+.ly_header_ttl p {
+	padding-top: 50px;
+	color: #ffffff;
+}
+
+.ly_header_r {
+	float: right;
+}
+
+/* ================================================ */
+/*共通のラッパー、ヘルパー
+/* ================================================ */
+.ly_cont_wrapper {
+	margin-top: 200px;
+	height: 600px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.hp_right_justify {
+	border-radius: 20px 0 0 20px;
+	width: 50%;
+  min-width: 0; // 横にはみ出ないようにする
+}
+
+.hp_left_justify {
+	border-radius: 0 20px 20px 0;
+	width: 50%;
+  min-width: 0; // 横にはみ出ないようにする
+}
+
+.hp_padding_r {
+	padding-right: 50px !important;
+}
+
+.hp_padding_l {
+	padding-left: 50px !important;
+}
+
+/* ================================================ */
+/*ボディ
+/* ================================================ */
+
+.bl_article_cont {
+	margin-top: 69px;
+}
+
+.bl_article_cont p {
+	margin-bottom: 35px;
+}
+
+.bl_howto_main {
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+.bl_howto_main_ttl {
+	margin-bottom: 50px;
+}
+
+.bl_howto_main_ttl li {
+	margin-bottom: 20px;
+}
+
+.bl_howto_main_cont li {
+	margin-bottom: 20px;
+}
+
+.bl_check_point {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bl_check_point p {
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+.el_check {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+/* ================================================ */
+/*フッター*/
+/* ================================================ */
