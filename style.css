@@ -19,6 +19,8 @@ body h2 {
 
 body h3 {
 	font-size: 2rem;
+	letter-spacing: .1em;
+	line-height: 40px;	
 }
 
 body li {
@@ -69,13 +71,13 @@ body li {
 .hp_right_justify {
 	border-radius: 20px 0 0 20px;
 	width: 50%;
-  min-width: 0; // 横にはみ出ないようにする
+  	min-width: 0; // 横にはみ出ないようにする
 }
 
 .hp_left_justify {
 	border-radius: 0 20px 20px 0;
 	width: 50%;
-  min-width: 0; // 横にはみ出ないようにする
+  	min-width: 0; // 横にはみ出ないようにする
 }
 
 .hp_padding_r {
@@ -129,6 +131,20 @@ body li {
 	margin-right: 10px;
 	width: 20px;
 	height: 20px;
+}
+
+.bl_garally {
+	padding: 0 100px;
+}
+
+.bl_garally img {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.bl_garally_ttl {
+	display: flex;
+	justify-content: space-between;
 }
 
 /* ================================================ */
