@@ -85,6 +85,8 @@ h3 img {
 	height: 100vh;
 	width: 100%;
   	min-width: 0; /* 横にはみ出ないようにする*/
+  	object-fit: cover;
+  	object-position: center;
 }
 
 .el_left_fit_img {
@@ -92,6 +94,8 @@ h3 img {
 	height: 100vh;
 	width: 100%;
   	min-width: 0;
+  	object-fit: cover;
+  	object-position: center;
 }
 
 .hp_padding_r {
@@ -213,7 +217,7 @@ ul {
 
 h3 img {
 	width: 20px;
-	padding: 0 30px;
+	padding: 0 40px;
 }
 
 
@@ -257,20 +261,14 @@ h3 img {
 }
 
 .el_right_fit_img {
-	border-radius: 20px 0 0 20px;
     height: 30vh;
     min-width: 0;
-    object-fit: cover;
-    object-position: center;
 }
 
 .el_left_fit_img {
-	border-radius: 0 20px 20px 0;
 	height: 350px;
 	width: 65vh;
     min-width: 0;
-    object-fit: cover;
-    object-position: center;
 }
 
 .tb_step1_img {
@@ -283,6 +281,118 @@ h3 img {
 
 .tb_step1_img {
 	display: none;
+}
+
+.bl_garally {
+	padding: 0 50px; 
+}
+
+.ly_footer {
+	margin-top: 150px;
+}
+
+}
+
+/*================================================
+Smartphone :  画面の横幅が640pxまで
+=================================================*/
+@media screen and (max-width:640px){
+
+body {
+	font-size: .8rem;
+	line-height: 20px;	
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	letter-spacing: .05em;
+	line-height: 30px;	
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+ul {
+	margin-bottom: 20px;	
+}
+
+h3 img {
+	width: 15px;
+	padding: 0 20px;
+}
+
+
+.ly_header {
+	padding: 20px;
+	height: 100vh;
+	background-image: url("images/top_kv_pc_01.jpg");
+	background-size: cover; /*めいいっぱいに表示*/
+	background-position: center;
+}
+
+.ly_cont_wrapper {
+	margin-top: 50px;
+}
+
+.hp_padding_r {
+	padding-right: 20px !important;
+}
+
+.hp_padding_l {
+	padding-left: 20px !important;
+}
+
+.ly_header_ttl img {
+	padding-top: 200px;
+	/*width: 300px;*/
+}
+
+.el_right_fit_img {
+    height: 30vh;
+    min-width: 0;
+    width: 100%;
+}
+
+.el_left_fit_img {
+	height: 350px;
+	width: 80%;
+    min-width: 0;
+}
+
+.bl_article_cont {
+	margin-top: 40px;
+}
+
+.bl_garally {
+	padding: 0;
+	padding-right: 30px; 
+}
+
+.ly_footer img {
+	width: 20vh;
+}
+
+.el_iphone_img {
+	width: 20vh;
+	margin-bottom: 50px;
+}
+
+.bl_dl_btns img {
+    margin-top: 20px;
+	height: 35px;
+}
+
+.ly_footer {
+	margin-top: 100px;
+}
+
+.ly_footer li {
+	text-align: center;
 }
 
 }
