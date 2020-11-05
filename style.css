@@ -129,6 +129,22 @@ h3 img {
   	object-position: center;
 }
 
+.el_right_fit_img_zooming_wrapper {
+	width: 100%;
+	height: 100vh;
+	border-radius: 20px 0 0 20px;
+	overflow: hidden; /*ズームではみ出た分は隠す*/
+}
+
+.el_right_fit_img:hover {
+	animation: animationZoomIn 1s ease-out normal;
+	animation-fill-mode:forwards
+}
+
+@keyframes animationZoomIn {
+    to { transform:scale(1.3)}
+}
+
 .el_left_fit_img {
 	border-radius: 0 20px 20px 0;
 	height: 100vh;
@@ -137,6 +153,19 @@ h3 img {
   	object-fit: cover;
   	object-position: center;
 }
+
+.el_left_fit_img_zooming_wrapper {
+	width: 100%;
+	height: 100vh;
+	border-radius: 0 20px 20px 0;
+	overflow: hidden; /*ズームではみ出た分は隠す*/
+}
+
+.el_left_fit_img:hover {
+	animation: animationZoomIn 1s ease-out normal;
+	animation-fill-mode:forwards
+}
+
 
 .hp_padding_r {
 	padding-right: 50px !important;
