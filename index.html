@@ -19,33 +19,25 @@
 </head>
 
 <script type="text/javascript">
-// 1.簡単なスライダー
 $(function() {
-//ここにSlickのjQueryを記述
 $('.slider').slick({
 	fade: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplay: true,
-	autoplaySpeed: 3000,
-	speed: 2000,
+	autoplaySpeed: 5000,
+	speed: 1000,
 	arrows: false,
 });
 });
 </script>
 
 <body>
-	<!-- <h1>
-		1. 簡単なスライダー
-	</h1>
-	<div class="slider">
-		<img src="images/top_kv_pc_01.jpg" alt="">
-		<img src="images/top_kv_pc_02.jpg" alt="">
-		<img src="images/top_kv_pc_01.jpg" alt="">
-	</div> -->
-
 	<div class="ly_header">
-		<img class="ly_header_img" src="images/top_kv_pc_01.jpg">
+		<div class="slider">
+			<img class="slider_img_1" src="images/top_kv_pc_01.jpg" alt="">
+			<img class="slider_img_2" src="images/top_kv_pc_02.jpg" alt="">
+		</div>
 		<h1 class="ly_header_ttl">
 			<img src="images/FaceLog.png">
 			<p>スキンケア記録アプリ</p>

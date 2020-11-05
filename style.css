@@ -38,25 +38,46 @@ h3 img {
 /* ================================================ */
 /*ヘッダー
 /* ================================================ */
-
-
 .ly_header {
+	width: 100%;
+	height: 100vh;
+}
+
+.slider {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden; /*ズームではみ出た分は隠す*/
+}
+
+.slider img {
+	/*.slider下のsickによって制御される部分にクラス指定でスタイルが当たらないので、imgに対して当てる*/
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	overflow: hidden; /*ズームインではみ出た分は隠す*/
-}
-
-.ly_header_img {
-	width: 100%;
-	height: 100vh;
-	animation: animationZoom1 3s ease-in-out normal;
 	object-fit: cover;
   	object-position: center;
 }
 
+.slider_img_1 {
+	/*見えている間、ズームインの繰り返し*/
+	animation: animationZoom1 12s ease-out infinite;
+}
+
+.slider_img_2 {
+	/*見えている間、ズームアウトの繰り返し*/
+	animation: animationZoom2 12s ease-out infinite;
+}
+
 @keyframes animationZoom1 {
-    100% { transform:scale(1.1)} 
+	from { transform:scale(1.1) }
+	50% { transform:scale(1) }
+    to { transform:scale(1.1)} 
+}
+
+@keyframes animationZoom2 {
+	from { transform:scale(1) }
+    50% { transform:scale(1.1) }
+    to { transform:scale(1) }
 }
 
 .ly_header_ttl {
@@ -64,7 +85,7 @@ h3 img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 80%;
 	height: 80vh;
 }
 
@@ -245,8 +266,6 @@ h3 img {
 ==================================================*/
 
 .ly_header {
-	/*paddingしてwidth100%するとpadding分ずれちゃう・・・！*/
-	padding: 30px;
 	height: 100vh;
 	background-image: url("images/top_kv_pc_01.jpg");
 	background-size: cover; /*めいいっぱいに表示*/
@@ -347,7 +366,6 @@ h3 img {
 
 
 .ly_header {
-	padding: 20px;
 	height: 100vh;
 	background-image: url("images/top_kv_pc_01.jpg");
 	background-size: cover; /*めいいっぱいに表示*/
@@ -368,7 +386,7 @@ h3 img {
 
 .ly_header_ttl img {
 	padding-top: 200px;
-	/*width: 300px;*/
+	width: 80%;
 }
 
 .el_right_fit_img {
