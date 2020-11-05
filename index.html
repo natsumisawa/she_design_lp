@@ -10,11 +10,53 @@
 	<meta name="keywords" content="" />
 		<link rel="stylesheet" href="reset.min.css" media="all">
 		<link rel="stylesheet" href="style.css" media="all">
+		<link rel="stylesheet" href="slick/slick.css" media="all">
+		<link rel="stylesheet" href="slick/slick-theme.css" />
+
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script src="slick/slick.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
+<script type="text/javascript">
+// 1.簡単なスライダー
+$(function() {
+//ここにSlickのjQueryを記述
+$('.slider').slick({
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 3000,
+	speed: 2000,
+	arrows: false,
+});
+});
+</script>
+
 <body>
+	<!-- <h1>
+		1. 簡単なスライダー
+	</h1>
+	<div class="slider">
+		<img src="images/top_kv_pc_01.jpg" alt="">
+		<img src="images/top_kv_pc_02.jpg" alt="">
+		<img src="images/top_kv_pc_01.jpg" alt="">
+	</div> -->
+
 	<div class="ly_header">
+		<img class="ly_header_img" src="images/top_kv_pc_01.jpg">
+		<h1 class="ly_header_ttl">
+			<img src="images/FaceLog.png">
+			<p>スキンケア記録アプリ</p>
+		</h1>
+		<div class="ly_header_r">
+			<img src="images/scroll.png">
+		</div>
+	</div>
+
+	<div class="ly_header">
+		<!-- <img src="images/top_kv_pc_01.jpg"> -->
 		<h1 class="ly_header_ttl">
 			<img src="images/FaceLog.png">
 			<p>スキンケア記録アプリ</p>
