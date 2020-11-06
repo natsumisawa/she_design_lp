@@ -2,18 +2,27 @@
 /* ================================================ */
 /*               全体設定                */
 /* ================================================ */
+html{
+  scroll-behavior: smooth;
+}
 
 body {
 	background-color:#ffffff;
-	font-family:  YuGothic,'Yu Gothic', Osaka, sans-serif, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+	font-family: Noto Sans JP,sans-serif, YuGothic,'Yu Gothic', Osaka, sans-serif, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
 	letter-spacing: .2em;
 	line-height: 30px;
+	font-weight: 300;
+}
+
+strong {
+	font-size: 1.2rem;
 }
 
 h2 {
 	font-size: 2.5rem;
 	letter-spacing: .1em;
 	line-height: 80px;
+	font-weight: 400;
 }
 
 h3 {
@@ -35,6 +44,118 @@ h3 img {
 	padding: 0 60px;
 }
 
+@media screen and (max-width: 768px){
+
+	body {
+		letter-spacing: .1em;
+		line-height: 25px;
+	}
+
+	h2 {
+		font-size: 2rem;
+		letter-spacing: .1em;
+		line-height: 50px;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		letter-spacing: .1em;
+		line-height: 40px;	
+	}
+
+	li {
+		margin-bottom: 15px;
+	}
+
+	ul {
+		margin-bottom: 30px;	
+	}
+
+	h3 img {
+		width: 20px;
+		padding: 0 40px;
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+
+	body {
+		font-size: .8rem;
+		line-height: 20px;	
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		letter-spacing: .05em;
+		line-height: 30px;	
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	ul {
+		margin-bottom: 20px;	
+	}
+
+	h3 img {
+		width: 15px;
+		padding: 0 20px;
+	}
+}
+
+/* ================================================ */
+/*ヘルパー
+/* ================================================ */
+.hp_padding_r {
+	padding-right: 50px !important;
+}
+
+.hp_padding_l {
+	padding-left: 50px !important;
+}
+
+.hp_line_height_s {
+	line-height: 20px;
+}
+
+.hp_effect_fade {
+	opacity: 0;
+	transform: translate(0, 45px);
+	transition: all 3000ms;
+}
+
+.hp_effect_fade.hp_effect_scroll {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+@media screen and (max-width: 768px){
+	.hp_padding_r {
+		padding-right: 40px !important;
+	}
+
+	.hp_padding_l {
+		padding-left: 40px !important;
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.hp_padding_r {
+		padding-right: 20px !important;
+	}
+
+	.hp_padding_l {
+		padding-left: 20px !important;
+	}
+}
+
 /* ================================================ */
 /*ヘッダー
 /* ================================================ */
@@ -43,13 +164,13 @@ h3 img {
 	height: 100vh;
 }
 
-.slider {
+.header_slider {
 	width: 100%;
 	height: 100vh;
 	overflow: hidden; /*ズームではみ出た分は隠す*/
 }
 
-.slider img {
+.header_slider img {
 	/*.slider下のsickによって制御される部分にクラス指定でスタイルが当たらないので、imgに対して当てる*/
 	position: relative;
 	width: 100%;
@@ -70,13 +191,13 @@ h3 img {
 
 @keyframes animationZoom1 {
 	from { transform:scale(1.1) }
-	50% { transform:scale(1) }
+	60% { transform:scale(1) }
     to { transform:scale(1.1)} 
 }
 
 @keyframes animationZoom2 {
 	from { transform:scale(1) }
-    50% { transform:scale(1.1) }
+    40% { transform:scale(1.1) }
     to { transform:scale(1) }
 }
 
@@ -104,11 +225,50 @@ h3 img {
 	bottom: 3%;
 	right: 3%;
 	float: right;
+	color: #ffffff;
+}
+
+@media screen and (max-width: 768px){
+	.ly_header {
+	height: 100vh;
+	background-image: url("images/top_kv_pc_01.jpg");
+	background-size: cover; /*めいいっぱいに表示*/
+	background-position: center;
+	}
+
+	.ly_cont_wrapper {
+		margin-top: 90px;
+	}
+
+	.ly_header_ttl img {
+		padding-top: 400px;
+		width: 300px;
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.ly_header {
+		height: 100vh;
+		background-image: url("images/top_kv_pc_01.jpg");
+		background-size: cover; /*めいいっぱいに表示*/
+		background-position: center;
+	}
+
+	.ly_cont_wrapper {
+		margin-top: 50px;
+	}
+
+	.ly_header_ttl img {
+		padding-top: 200px;
+		width: 80%;
+	}
 }
 
 /* ================================================ */
-/*共通のレイアウト、ヘルパー
+/*コンセプト
 /* ================================================ */
+
 .ly_cont_wrapper {
 	margin-top: 200px;
 	display: flex;
@@ -167,20 +327,8 @@ h3 img {
 }
 
 
-.hp_padding_r {
-	padding-right: 50px !important;
-}
-
-.hp_padding_l {
-	padding-left: 50px !important;
-}
-
-.hp_line_height_s {
-	line-height: 20px;
-}
-
 /* ================================================ */
-/*ボディ
+/*ハウツー
 /* ================================================ */
 
 .bl_article_cont {
@@ -220,20 +368,6 @@ h3 img {
 	height: 20px;
 }
 
-.bl_garally {
-	padding: 0 100px;
-}
-
-.bl_garally img {
-	width: 100%;
-	border-radius: 20px;
-}
-
-.bl_garally_ttl {
-	display: flex;
-	justify-content: space-between;
-}
-
 .el_iphone_img {
 	width: 200px;
 }
@@ -242,10 +376,121 @@ h3 img {
 	height: 50px;
 }
 
+@media screen and (max-width: 768px){
+	.bl_howto_main {
+		margin-top: 40px;
+	}
+
+	.el_right_fit_img {
+	    height: 30vh;
+	    min-width: 0;
+	}
+
+	.el_left_fit_img {
+		height: 350px;
+		width: 65vh;
+	    min-width: 0;
+	}
+
+	.tb_step1_img {
+		display: none;
+	}
+
+	.bl_howto {
+		display: block;
+	}
+
+	.tb_step1_img {
+		display: none;
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+
+	.el_right_fit_img {
+	    height: 30vh;
+	    min-width: 0;
+	    width: 100%;
+	}
+
+	.el_left_fit_img {
+		height: 350px;
+		width: 80%;
+	    min-width: 0;
+	}
+
+	.el_iphone_img {
+		width: 20vh;
+		margin-bottom: 50px;
+	}
+
+	.bl_dl_btns img {
+	    margin-top: 20px;
+		height: 35px;
+	}
+}
 
 /* ================================================ */
-/*フッター*/
+/*インタビュー
 /* ================================================ */
+
+.bl_garally {
+	width: 100%;
+	padding: 0 100px;
+	overflow: hidden;
+}
+
+/*.bl_garally img {
+	width: 100%;
+	border-radius: 20px;
+}
+*/
+.bl_garally_ttl {
+	display: flex;
+	justify-content: space-between;
+}
+
+.article_slider img {
+	height: 50vh;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 768px){
+	.bl_garally {
+		padding: 0 50px; 
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.bl_garally {
+		padding: 0;
+		padding-right: 30px; 
+	}
+}
+
+/* ================================================ */
+/*アプリケーション
+/* ================================================ */
+/* sp */
+@media screen and (max-width:640px){
+	.el_iphone_img {
+		width: 20vh;
+		margin-bottom: 50px;
+	}
+
+	.bl_dl_btns img {
+	    margin-top: 20px;
+		height: 35px;
+	}
+}
+
+
+/* ================================================ */
+/*フッター
+/* ================================================ */
+
 .ly_footer {
 	background-color: #464646;
 	height: 100px;
@@ -253,212 +498,23 @@ h3 img {
 	padding: 100px;
 }
 
-
-/*================================================
-Tablet : 画面の横幅が768pxまで
-==================================================*/
 @media screen and (max-width: 768px){
-
-body {
-	letter-spacing: .1em;
-	line-height: 25px;
+	.ly_footer {
+		margin-top: 150px;
+	}
 }
 
-h2 {
-	font-size: 2rem;
-	letter-spacing: .1em;
-	line-height: 50px;
-}
-
-h3 {
-	font-size: 1.5rem;
-	letter-spacing: .1em;
-	line-height: 40px;	
-}
-
-li {
-	margin-bottom: 15px;
-}
-
-ul {
-	margin-bottom: 30px;	
-}
-
-h3 img {
-	width: 20px;
-	padding: 0 40px;
-}
-
-
-/*================================================
-レイアウト、ヘルパー
-==================================================*/
-
-.ly_header {
-	height: 100vh;
-	background-image: url("images/top_kv_pc_01.jpg");
-	background-size: cover; /*めいいっぱいに表示*/
-	background-position: center;
-}
-
-.ly_cont_wrapper {
-	margin-top: 90px;
-}
-
-.hp_padding_r {
-	padding-right: 40px !important;
-}
-
-.hp_padding_l {
-	padding-left: 40px !important;
-}
-
-.ly_header_ttl img {
-	padding-top: 400px;
-	width: 300px;
-}
-
-
-/*================================================
-ボディ
-==================================================*/
-
-.bl_howto_main {
-	margin-top: 40px;
-}
-
-.el_right_fit_img {
-    height: 30vh;
-    min-width: 0;
-}
-
-.el_left_fit_img {
-	height: 350px;
-	width: 65vh;
-    min-width: 0;
-}
-
-.tb_step1_img {
-	display: none;
-}
-
-.bl_howto {
-	display: block;
-}
-
-.tb_step1_img {
-	display: none;
-}
-
-.bl_garally {
-	padding: 0 50px; 
-}
-
-.ly_footer {
-	margin-top: 150px;
-}
-
-}
-
-/*================================================
-Smartphone :  画面の横幅が640pxまで
-=================================================*/
+/* sp */
 @media screen and (max-width:640px){
+	.ly_footer img {
+		width: 20vh;
+	}
 
-body {
-	font-size: .8rem;
-	line-height: 20px;	
-}
-
-h2 {
-	font-size: 1.5rem;
-}
-
-h3 {
-	font-size: 1.2rem;
-	letter-spacing: .05em;
-	line-height: 30px;	
-}
-
-li {
-	margin-bottom: 10px;
-}
-
-ul {
-	margin-bottom: 20px;	
-}
-
-h3 img {
-	width: 15px;
-	padding: 0 20px;
-}
-
-
-.ly_header {
-	height: 100vh;
-	background-image: url("images/top_kv_pc_01.jpg");
-	background-size: cover; /*めいいっぱいに表示*/
-	background-position: center;
-}
-
-.ly_cont_wrapper {
-	margin-top: 50px;
-}
-
-.hp_padding_r {
-	padding-right: 20px !important;
-}
-
-.hp_padding_l {
-	padding-left: 20px !important;
-}
-
-.ly_header_ttl img {
-	padding-top: 200px;
-	width: 80%;
-}
-
-.el_right_fit_img {
-    height: 30vh;
-    min-width: 0;
-    width: 100%;
-}
-
-.el_left_fit_img {
-	height: 350px;
-	width: 80%;
-    min-width: 0;
-}
-
-.bl_article_cont {
-	margin-top: 40px;
-}
-
-.bl_garally {
-	padding: 0;
-	padding-right: 30px; 
-}
-
-.ly_footer img {
-	width: 20vh;
-}
-
-.el_iphone_img {
-	width: 20vh;
-	margin-bottom: 50px;
-}
-
-.bl_dl_btns img {
-    margin-top: 20px;
-	height: 35px;
-}
-
-.ly_footer {
+	.ly_footer {
 	margin-top: 100px;
-}
+	}
 
-.ly_footer li {
-	text-align: center;
-}
-
+	.ly_footer li {
+		text-align: center
+	}
 }
