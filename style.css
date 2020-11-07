@@ -1,6 +1,6 @@
 ﻿@charset UTF-8;
 /* ================================================ */
-/*               全体設定                */
+/* 全体設定
 /* ================================================ */
 html{
   scroll-behavior: smooth;
@@ -110,8 +110,37 @@ h3 img {
 }
 
 /* ================================================ */
-/*ヘルパー
+/* 共通レイアウト
 /* ================================================ */
+
+.ly_section {
+	margin-top: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ly_innner__center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	.ly_section {
+		margin-top: 90px;
+	}
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.ly_section {
+		margin-top: 80px
+	}
+}
+
+/* ================================================ */
+/* ヘルパー
+/* ================================================ */
+
 .hp_padding_r {
 	padding-right: 50px !important;
 }
@@ -135,6 +164,10 @@ h3 img {
 	transform: translate(0, 0);
 }
 
+.hp_flex_reverse {
+	flex-flow: row-reverse;
+}
+
 @media screen and (max-width: 768px){
 	.hp_padding_r {
 		padding-right: 40px !important;
@@ -142,6 +175,10 @@ h3 img {
 
 	.hp_padding_l {
 		padding-left: 40px !important;
+	}
+
+	.hp_delete_element {
+		display: none;
 	}
 }
 
@@ -157,13 +194,67 @@ h3 img {
 }
 
 /* ================================================ */
-/*ヘッダー
+/* 共通ブロック
 /* ================================================ */
-.ly_header {
+.bl_media {
 	width: 100%;
-	height: 100vh;
+	display: flex;
+	justify-content: space-between;
 }
 
+.bl_media_body {
+	margin-top: 100px;
+}
+
+.bl_media_ttl {
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px){
+	.bl_media {
+		display: block;
+		height: 80vh;
+	}
+
+	.bl_media_body {
+		margin-top: 40px;
+	}
+
+	.bl_media_body {
+		margin-top: 0;
+	}
+}
+
+/* ================================================ */
+/* 共通エレメント
+/* ================================================ */
+/* sp */
+@media screen and (max-width:640px){
+	.el_iphone_img {
+		width: 20vh;
+		margin-bottom: 50px;
+	}
+
+	.el_h_arranged_img img {
+	    margin-top: 20px;
+		height: 35px;
+	}
+}
+
+.el_check_icon {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.el_w200_img {
+	width: 200px;
+}
+
+
+/* ================================================ */
+/* ヘッダー
+/* ================================================ */
 .header_slider {
 	width: 100%;
 	height: 100vh;
@@ -228,16 +319,21 @@ h3 img {
 	color: #ffffff;
 }
 
+.ly_header_r:hover {
+	animation: animationZoomInS 0.5s ease-out normal;
+	animation-fill-mode:forwards
+}
+
+@keyframes animationZoomInS {
+    to { transform:scale(1.2)}
+}
+
 @media screen and (max-width: 768px){
 	.ly_header {
 	height: 100vh;
 	background-image: url("images/top_kv_pc_01.jpg");
 	background-size: cover; /*めいいっぱいに表示*/
 	background-position: center;
-	}
-
-	.ly_cont_wrapper {
-		margin-top: 90px;
 	}
 
 	.ly_header_ttl img {
@@ -255,10 +351,6 @@ h3 img {
 		background-position: center;
 	}
 
-	.ly_cont_wrapper {
-		margin-top: 50px;
-	}
-
 	.ly_header_ttl img {
 		padding-top: 200px;
 		width: 80%;
@@ -266,18 +358,15 @@ h3 img {
 }
 
 /* ================================================ */
-/*コンセプト
+/* ハウツー
 /* ================================================ */
 
-.ly_cont_wrapper {
-	margin-top: 200px;
-	display: flex;
-	justify-content: space-between;
+.bl_article_cont {
+	margin-top: 69px;
 }
 
-.ly_cont_innner__center {
-	margin: 0 auto;
-	text-align: center;
+.bl_article_cont p {
+	margin-bottom: 35px;
 }
 
 .el_right_fit_img {
@@ -290,9 +379,9 @@ h3 img {
 }
 
 .el_right_fit_img_zooming_wrapper {
-	width: 100%;
-	height: 100vh;
 	border-radius: 20px 0 0 20px;
+	height: 100%;
+	width: 100%;
 	overflow: hidden; /*ズームではみ出た分は隠す*/
 }
 
@@ -315,9 +404,9 @@ h3 img {
 }
 
 .el_left_fit_img_zooming_wrapper {
-	width: 100%;
-	height: 100vh;
 	border-radius: 0 20px 20px 0;
+	height: 100%;
+	width: 100%;
 	overflow: hidden; /*ズームではみ出た分は隠す*/
 }
 
@@ -326,35 +415,14 @@ h3 img {
 	animation-fill-mode:forwards
 }
 
-
-/* ================================================ */
-/*ハウツー
-/* ================================================ */
-
-.bl_article_cont {
-	margin-top: 69px;
-}
-
-.bl_article_cont p {
-	margin-bottom: 35px;
-}
-
-.bl_howto {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-}
-
-.bl_howto_1 {
-	flex-flow: row-reverse;
-}
-
-.bl_howto_main {
-	margin-top: 100px;
-}
-
-.bl_howto_main_ttl {
-	margin-bottom: 50px;
+.el_circle_icon_wrapper {
+	border: solid 2px #f1f1f1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+	text-align: center;
+    line-height: 160px;
 }
 
 .bl_check_point {
@@ -362,22 +430,25 @@ h3 img {
 	justify-content: flex-start;
 }
 
-.el_check {
-	margin-right: 10px;
-	width: 20px;
-	height: 20px;
-}
-
-.el_iphone_img {
-	width: 200px;
-}
-
-.bl_dl_btns img {
+.el_h_arranged_img img {
 	height: 50px;
 }
 
 @media screen and (max-width: 768px){
-	.bl_howto_main {
+	.el_right_fit_img_zooming_wrapper {
+		height: 35vh;
+	}
+
+	.el_left_fit_img_zooming_wrapper {
+		height: 35vh;
+	}
+
+	.bl_media {
+		display: block;
+		height: 80vh;
+	}
+
+	.bl_media_body {
 		margin-top: 40px;
 	}
 
@@ -387,27 +458,18 @@ h3 img {
 	}
 
 	.el_left_fit_img {
-		height: 350px;
+		height: 30vh;
 		width: 65vh;
 	    min-width: 0;
 	}
 
-	.tb_step1_img {
-		display: none;
-	}
-
-	.bl_howto {
-		display: block;
-	}
-
-	.tb_step1_img {
-		display: none;
+	.bl_media_body {
+		margin-top: 0;
 	}
 }
 
 /* sp */
 @media screen and (max-width:640px){
-
 	.el_right_fit_img {
 	    height: 30vh;
 	    min-width: 0;
@@ -415,7 +477,7 @@ h3 img {
 	}
 
 	.el_left_fit_img {
-		height: 350px;
+		height: 30vh;
 		width: 80%;
 	    min-width: 0;
 	}
@@ -425,14 +487,14 @@ h3 img {
 		margin-bottom: 50px;
 	}
 
-	.bl_dl_btns img {
+	.el_h_arranged_img img {
 	    margin-top: 20px;
 		height: 35px;
 	}
 }
 
 /* ================================================ */
-/*インタビュー
+/* インタビュー
 /* ================================================ */
 
 .bl_garally {
@@ -441,11 +503,6 @@ h3 img {
 	overflow: hidden;
 }
 
-/*.bl_garally img {
-	width: 100%;
-	border-radius: 20px;
-}
-*/
 .bl_garally_ttl {
 	display: flex;
 	justify-content: space-between;
@@ -471,24 +528,7 @@ h3 img {
 }
 
 /* ================================================ */
-/*アプリケーション
-/* ================================================ */
-/* sp */
-@media screen and (max-width:640px){
-	.el_iphone_img {
-		width: 20vh;
-		margin-bottom: 50px;
-	}
-
-	.bl_dl_btns img {
-	    margin-top: 20px;
-		height: 35px;
-	}
-}
-
-
-/* ================================================ */
-/*フッター
+/* フッター
 /* ================================================ */
 
 .ly_footer {
