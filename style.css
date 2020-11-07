@@ -412,19 +412,93 @@ h3 img {
 	overflow: hidden; /*ズームではみ出た分は隠す*/
 }
 
+
 .el_left_fit_img:hover {
 	animation: animationZoomIn 1s ease-out normal;
 	animation-fill-mode:forwards
 }
 
 .el_circle_icon_wrapper {
-	border: solid 2px #f1f1f1;
+	position: relative;
+	background-color: #cba671;
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-bottom: 50px;
 	text-align: center;
     line-height: 160px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*円の左に正方形を描く*/
+.el_circle_icon_wrapper::before {
+	content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 150px;
+    height: 150px;
+    background: #f1f1f1;
+    transform-origin: right 75px;
+    z-index: 2;
+    animation: rotate-circle-left 3s linear infinite;
+}
+
+/*円の右に正方形を描く*/
+.el_circle_icon_wrapper::after {
+	content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 75px;
+    width: 150px;
+    height: 150px;
+    background: #f1f1f1;
+    transform-origin: left 75px;
+    z-index: 3;
+    animation: rotate-circle-right 3s linear infinite;
+}
+
+.el_circle_icon_inner {
+	position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.el_circle_icon_inner img {
+	z-index: 5;	
+}
+
+@keyframes rotate-circle-right {
+    0%   {
+        transform: rotate(0deg);
+        background: #f1f1f1;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #f1f1f1;
+    }
+    /*綺麗なエンゲージアニメーションは50.1%だったが50%にしたらいい感じになった...*/
+    50% {
+        transform: rotate(360deg);
+        background: #cba671;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #cba671;
+    }
+}
+
+@keyframes rotate-circle-left {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
 }
 
 .bl_check_point {
