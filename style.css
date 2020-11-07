@@ -90,7 +90,7 @@ h3 img {
 	}
 
 	h3 {
-		font-size: 1.2rem;
+		font-size: .9rem;
 		letter-spacing: .05em;
 		line-height: 30px;	
 	}
@@ -149,7 +149,11 @@ h3 img {
 	padding-left: 50px !important;
 }
 
-.hp_line_height_s {
+.hp_padding_l_XL {
+	padding-left: 100px !important;
+}
+
+.hp_line_height_S {
 	line-height: 20px;
 }
 
@@ -168,6 +172,12 @@ h3 img {
 	flex-flow: row-reverse;
 }
 
+.hp_side_by_side {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
 @media screen and (max-width: 768px){
 	.hp_padding_r {
 		padding-right: 40px !important;
@@ -175,10 +185,6 @@ h3 img {
 
 	.hp_padding_l {
 		padding-left: 40px !important;
-	}
-
-	.hp_delete_element {
-		display: none;
 	}
 }
 
@@ -190,6 +196,23 @@ h3 img {
 
 	.hp_padding_l {
 		padding-left: 20px !important;
+	}
+
+	.hp_padding_l_XL {
+		padding-left: 40px !important;
+	}
+
+	.hp_side_ttl_icon {
+		width: 150px;
+	}
+
+	.hp_side_sub_ttl_icon {
+		width: 100px;	
+	}
+
+	.hp_h_arranged_img img {
+	    margin-top: 20px;
+		height: 35px;
 	}
 }
 
@@ -225,23 +248,11 @@ h3 img {
 	.bl_media_body {
 		margin: 50px 0;
 	}
-}*/
+}
 
 /* ================================================ */
 /* 共通エレメント
 /* ================================================ */
-/* sp */
-@media screen and (max-width:640px){
-	.el_iphone_img {
-		width: 20vh;
-		margin-bottom: 50px;
-	}
-
-	.el_h_arranged_img img {
-	    margin-top: 20px;
-		height: 35px;
-	}
-}
 
 .el_check_icon {
 	margin-right: 10px;
@@ -249,10 +260,25 @@ h3 img {
 	height: 20px;
 }
 
-.el_w200_img {
+.el_iphone_img {
 	width: 200px;
 }
 
+.el_flower_icon {
+	width: 60px;
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.el_iphone_img {
+		width: 100px;
+		margin-bottom: 50px;
+	}
+
+	.el_ttl_icon {
+		width: 100px;
+	}
+}
 
 /* ================================================ */
 /* ヘッダー
@@ -362,12 +388,11 @@ h3 img {
 /* ================================================ */
 /* ハウツー
 /* ================================================ */
-
-.bl_article_cont {
+.ly_article {
 	margin-top: 69px;
 }
 
-.bl_article_cont p {
+.ly_article p {
 	margin-bottom: 35px;
 }
 
@@ -544,14 +569,19 @@ h3 img {
 
 /* sp */
 @media screen and (max-width:640px){
+	.el_right_fit_img_zooming_wrapper {
+		height: 30vh;
+	}
+
 	.el_right_fit_img {
 	    height: 30vh;
 	    min-width: 0;
 	    width: 100%;
 	}
 
-	.el_right_fit_img_zooming_wrapper {
+	.el_left_fit_img_zooming_wrapper {
 		height: 30vh;
+		width: 80%;
 	}
 
 	.el_left_fit_img {
@@ -560,14 +590,28 @@ h3 img {
 	    min-width: 0;
 	}
 
-	.el_left_fit_img_zooming_wrapper {
-		height: 30vh;
-		width: 50vh;
-	}
-
 	.el_h_arranged_img img {
 	    margin-top: 20px;
 		height: 35px;
+	}
+
+	.el_circle_icon_inner img {
+		width: 80%;
+	}
+
+	.el_circle_icon_wrapper {
+	    width: 100px;
+	    height: 100px;
+	    line-height: 100px;
+	    overflow: hidden;
+	    z-index: 1;
+	}
+
+	.el_circle_icon_inner {
+	    top: 5px;
+	    left: 5px;
+	    width: 90px;
+	    height: 90px;
 	}
 }
 
