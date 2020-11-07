@@ -213,17 +213,19 @@ h3 img {
 @media screen and (max-width: 768px){
 	.bl_media {
 		display: block;
-		height: 80vh;
 	}
 
 	.bl_media_body {
 		margin-top: 40px;
 	}
-
-	.bl_media_body {
-		margin-top: 0;
-	}
 }
+
+/*/* sp */
+@media screen and (max-width:640px){
+	.bl_media_body {
+		margin: 50px 0;
+	}
+}*/
 
 /* ================================================ */
 /* 共通エレメント
@@ -396,8 +398,8 @@ h3 img {
 
 .el_left_fit_img {
 	border-radius: 0 20px 20px 0;
-	height: 100vh; /*wrapperと同じ高さじゃないとzoomしたときにずれる*/
-	width: 100%;
+	height: 100vh; /*wrapperと同じ高さにしないとzoomしたときにずれる*/
+	width: 100%; /*wrapperと同じ幅にしないとzoomしたときにずれる*/
   	min-width: 0;
   	object-fit: cover;
   	object-position: center;
@@ -437,13 +439,13 @@ h3 img {
 @media screen and (max-width: 768px){
 	.bl_media {
 		display: block;
-		height: 70vh;
 	}
 
 	.bl_media_body {
 		margin-top: 40px;
 	}
 
+	/*右ぴったり寄せの画像は、左の要素で調整しているので幅指定不要*/
 	.el_right_fit_img_zooming_wrapper {
 		height: 35vh;
 	}
@@ -453,6 +455,7 @@ h3 img {
 	    min-width: 0;
 	}
 
+	/*左ぴったり寄せの画像は、右に余白ができるように幅指定必要*/
 	.el_left_fit_img_zooming_wrapper {
 		height: 35vh;
 		width: 65vh;
@@ -473,10 +476,19 @@ h3 img {
 	    width: 100%;
 	}
 
+	.el_right_fit_img_zooming_wrapper {
+		height: 30vh;
+	}
+
 	.el_left_fit_img {
 		height: 30vh;
-		width: 80%;
+		width: 50vh;
 	    min-width: 0;
+	}
+
+	.el_left_fit_img_zooming_wrapper {
+		height: 30vh;
+		width: 50vh;
 	}
 
 	.el_h_arranged_img img {
