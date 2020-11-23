@@ -114,22 +114,31 @@ h3 img {
 		font-size: 1rem;
 		padding-bottom: 10px;
 	}
+
+	h3 img {
+		padding: 0 30px;
+	}
 }
 
 /* ================================================ */
 /* 共通レイアウト
 /* ================================================ */
 
-.ly_flex_section {
+.ly_section__flex {
 	margin-top: 200px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .ly_section {
-	padding: 200px 0;
+	padding: 200px 100px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.ly_cont__flex {
+	display: flex;
+	justify-content: space-between;
 }
 
 .ly_ttl_top {
@@ -144,6 +153,11 @@ h3 img {
 
 .ly_ttl_r img {
 	width: 25px;
+}
+
+.ly_ttl_l img {
+	width: 25px;
+	padding: 0 50px;
 }
 
 .ly_cont_l {
@@ -167,6 +181,10 @@ h3 img {
 	.ly_cont_l {
 		padding-left: 40px;
 	}
+
+	.ly_ttl_l img {
+		width: 20px;
+	}
 }
 
 /* sp */
@@ -177,6 +195,10 @@ h3 img {
 
 	.ly_section {
 		padding: 80px 0;
+	}
+
+	.ly_cont__flex {
+		display: block;
 	}
 
 	.ly_ttl_r {
@@ -190,26 +212,19 @@ h3 img {
 	.ly_cont_l {
 		padding-left: 20px;
 	}
+
+	.ly_ttl_l img {
+		width: 15px;
+		padding: 0 20px;
+	}
 }
 
 /* ================================================ */
 /* ヘルパー
 /* ================================================ */
 
-.hp_padding_r {
-	padding-right: 50px !important;
-}
-
 .hp_padding_l {
 	padding-left: 50px !important;
-}
-
-.hp_padding_l_XL {
-	padding-left: 100px !important;
-}
-
-.hp_line_height_S {
-	line-height: 20px;
 }
 
 .hp_effect_fade {
@@ -227,21 +242,17 @@ h3 img {
 	flex-flow: row-reverse;
 }
 
-.hp_side_by_side {
+.hp__flex {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
 }
 
-.hp_h_arranged_img img {
+.hp_img__h_arranged img {
 	height: 50px;
 }
 
 @media screen and (max-width: 768px){
-	.hp_padding_r {
-		padding-right: 40px !important;
-	}
-
 	.hp_padding_l {
 		padding-left: 40px !important;
 	}
@@ -249,27 +260,15 @@ h3 img {
 
 /* sp */
 @media screen and (max-width:640px){
-	.hp_padding_r {
-		padding-right: 20px !important;
-	}
-
-	.hp_padding_l {
-		padding-left: 20px !important;
-	}
-
-	.hp_padding_l_XL {
-		padding-left: 40px !important;
-	}
-
-	.hp_side_ttl_icon {
+	.hp_ttl_icon {
 		width: 150px;
 	}
 
-	.hp_side_sub_ttl_icon {
+	.hp_sub_ttl_icon {
 		width: 100px;	
 	}
 
-	.hp_h_arranged_img img {
+	.hp_img__h_arranged img {
 	    margin-top: 20px;
 		height: 35px;
 	}
@@ -313,12 +312,6 @@ h3 img {
 /* 共通エレメント
 /* ================================================ */
 
-.el_check_icon {
-	margin-right: 10px;
-	width: 20px;
-	height: 20px;
-}
-
 .el_iphone_img {
 	width: 200px;
 }
@@ -332,10 +325,6 @@ h3 img {
 	.el_iphone_img {
 		width: 100px;
 		margin-bottom: 50px;
-	}
-
-	.el_ttl_icon {
-		width: 100px;
 	}
 }
 
@@ -460,11 +449,11 @@ h3 img {
 /* ================================================ */
 /* ハウツー
 /* ================================================ */
-.ly_article {
+.bl_article {
 	margin-top: 69px;
 }
 
-.ly_article p {
+.bl_article p {
 	margin-bottom: 35px;
 }
 
@@ -598,12 +587,6 @@ h3 img {
     100% { transform: rotate(180deg); }
 }
 
-.bl_check_point {
-	display: flex;
-	justify-content: flex-start;
-}
-
-
 @media screen and (max-width: 768px){
 	.bl_media {
 		display: block;
@@ -626,13 +609,17 @@ h3 img {
 	/*左ぴったり寄せの画像は、右に余白ができるように幅指定必要*/
 	.el_left_fit_img_zooming_wrapper {
 		height: 35vh;
-		width: 65vh;
+		width: 60vh;
 	}
 
 	.el_left_fit_img {
 		height: 35vh;
 		width: 65vh;
 	    min-width: 0;
+	}
+
+	.el_circle_icon_inner h3 {
+		padding-top: 32px;
 	}
 }
 
@@ -732,24 +719,20 @@ h3 img {
 /* 特徴
 /* ================================================ */
 
-.bl_img_unit {
-	display: flex;
-	justify-content: space-around;
+
+.bl_feature_li ul {
+	width: 25%;
 }
 
-.bl_img_unit ul {
-	width: 20%;
-}
-
-.bl_img_unit li:first-child {
+.bl_feature_li li:first-child {
 	height: 150px;
 }
 
-.bl_img_unit strong {
+.bl_feature_li strong {
 	display: block;
 }
 
-.bl_img_unit img {
+.bl_feature_li img {
 	width: 100px;
 	height: 100px;
 	object-fit: contain;
@@ -757,16 +740,16 @@ h3 img {
 
 /* sp */
 @media screen and (max-width:640px){
-	.bl_img_unit {
+	.bl_feature_li {
 		display: block;
 		margin: 0 auto;
 	}
 
-	.bl_img_unit li:first-child {
+	.bl_feature_li li:first-child {
 		height: 120px;
 	}
 
-	.bl_img_unit ul {
+	.bl_feature_li ul {
 		margin: 0 auto;
 		width: 80%;
 		height: 300px;
