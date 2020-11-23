@@ -58,39 +58,49 @@ $(function(){
 </script>
 
 <body>
-	<div class="header_slider">
-		<img class="slider_img_1" src="images/header.png" alt="">
-		<img class="slider_img_2" src="images/header.png" alt="">
-	</div>
-	<h1 class="ly_header_ttl">
-		<img src="images/FaceLog.png">
-		<p>スキンケア記録アプリで、<br>自分史上最高のお肌へ。</p>
-	</h1>
-	<div class="ly_header_r">
-		<a href="#concept"><img src="images/scroll.png"></a>
-	</div>
-	<div class="ly_section">
-		<div class="hp_padding_l hp_effect_fade" id="concept">
-			<div class="hp_side_by_side">
-				<h2>いつも、<br>ごきげんな肌へ。</h2>
-				<img class="el_flower_icon" src="images/flower.png">
+	<header>
+		<div class="header_slider">
+			<img class="slider_img_1" src="images/top_img1.jpg" alt="">
+			<img class="slider_img_2" src="images/top_img2.jpg" alt="">
+		</div>
+		<div class="bl_header">
+			<div class="bl_header_top">
+				<a href="#app_dl">APP DOWNLOAD</a>
 			</div>
-			<div class="ly_article">
-				<p>肌の調子がいいと、毎日ごきげんに過ごせる。<p>
-				<p>ほんとうはずっとそうでいたいのに、<br>
-				にきびや肌荒れ、毛穴のつまり、突然の肌トラブルなどに悩まされる日々。</p>
-				<p>新しいスキンケアを試してみては、<br>
-				自分の肌には合わないものを選んでしまったり・・・。</p>
-				<p>そんなあなたも"記録"から始めてみるだけで、ごきげん肌に近づけるかもしれません。<br>
-				FACE LOGで、</p>
-				<strong>自分にあったスキンケアを続けてみよう。</strong>
+			<div class="bl_header_ttl">
+				<img src="images/logo.png">
+				<!-- <img class="bl_header_ttl_img" src="images/FaceLog.png"> -->
+				<p>スキンケア記録アプリ</p>
+			</div>
+			<div class="bl_header_r">
+				<a href="#concept"><img src="images/scroll.png"></a>
 			</div>
 		</div>
-		<h3>
-			<img class="hp_padding_r" src="images/concept.png">
-		</h3>
+	</header>
+	<div class="ly_flex_section">
+		<div class="ly_cont_l">
+			<div class="hp_effect_fade" id="concept">
+				<div class="hp_side_by_side">
+					<h2>いつも、<br>ごきげんな肌へ。</h2>
+					<img class="el_flower_icon" src="images/flower.png">
+				</div>
+				<div class="ly_article">
+					<p>肌の調子がいいと、毎日ごきげんに過ごせる。<p>
+					<p>ほんとうはずっとそうでいたいのに、<br>
+					にきびや肌荒れ、毛穴のつまり、突然の肌トラブルなどに悩まされる日々。</p>
+					<p>新しいスキンケアを試してみては、<br>
+					自分の肌には合わないものを選んでしまったり・・・。</p>
+					<p>そんなあなたも"記録"から始めてみるだけで、ごきげん肌に近づけるかもしれません。<br>
+					FACE LOGで、</p>
+					<strong>自分にあったスキンケアを続けてみよう。</strong>
+				</div>
+			</div>
+		</div>
+		<div class="ly_ttl_r">
+			<img src="images/concept.png">
+		</div>
 	</div>
-	<div class="ly_section">
+	<div class="ly_flex_section">
 		<h3>
 			<img src="images/howtouse.png">
 		</h3>
@@ -114,7 +124,7 @@ $(function(){
 						</li>
 					</ul>
 				</div>
-				<div>
+				<!-- <div>
 					<ul>
 						<li class="bl_check_point">
 							<img class="el_check_icon" src="images/check.png">
@@ -125,11 +135,11 @@ $(function(){
 							<p class="hp_line_height_S">悩みにあわせて、<br>いま使うべきスキンケアを教えてくれます。</p>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
-	<div class="ly_section">
+	<div class="ly_flex_section">
 		<div class="bl_media hp_effect_fade">
 			<div class="el_left_fit_img_zooming_wrapper">
 				<img class="el_left_fit_img" src="images/app_image_2.png">
@@ -150,7 +160,7 @@ $(function(){
 						</li>
 					</ul>
 				</div>
-				<div>
+				<!-- <div>
 					<ul>
 						<li class="bl_check_point">
 							<img class="el_check_icon" src="images/check.png">
@@ -161,18 +171,53 @@ $(function(){
 							<p class="hp_line_height_S">悩み別にスキンケアの記録を見ることができます。</p>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 	<div class="ly_section">
+		<div class="ly_ttl_top">
+			<img src="images/arrow.png">
+			<h3>記録データを元に実現した機能</h3>
+		</div>
+		<div class="bl_img_unit">
+			<ul>
+				<li>
+					<img src="images/data_analysis.png">
+				</li>
+				<li>
+					<strong>お肌解析</strong>
+					<p>日々の記録から肌に合う成分、合わない成分を解析。使用しているスキンケア商品のマッチ率が表示されます。</p>	
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<img src="images/skincare.png">	
+				</li>
+				<li>
+					<strong>スキンケア提案</strong>
+					<p>お悩み別にカテゴライズされたスキンケア商品の中から、その日のお肌のお悩みに合わせて提案をします。</p>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<img src="images/users.png">	
+				</li>
+				<li>
+					<strong>ユーザーレコメンド</strong>
+					<p>似たようなお悩みをもったユーザーをレコメンド。記録を参考にできます。</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ly_flex_section">
 		<h3>
 			<img class="hp_padding_l" src="images/interview.png">
 		</h3>
 		<div class="bl_garally hp_effect_fade">
 			<div class="article_slider">
-				<img src="images/interview.jpeg">
-				<img src="images/header.jpg">
+				<img src="images/interview.jpg">
+				<img src="images/interview2.jpg">
 			</div>
 			<div class="bl_garally_ttl">
 				<h3>自分を肌よく知ることが、<br>
@@ -181,29 +226,27 @@ $(function(){
 			</div>
 		</div>
 	</div>
-	<div class="ly_section">
-		<div class="ly_innner__center">
-			<ul class="hp_effect_fade">
-				<li>
-					<img class="el_iphone_img" src="images/application_iphone.png">
-				</li>
-				<li>
-					<img class="hp_side_ttl_icon" src="images/application.png">	
-				</li>
-				<li>
-					<p>アプリなら、通知がくるから記録し忘れない。</p>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<img class="hp_side_sub_ttl_icon" src="images/app_dl.png">
-				</li>
-				<li class="hp_h_arranged_img">
-					<a href="#"><img src="images/app_google.svg"></a>
-					<a href="#"><img src="images/app_apple.svg"></a>
-				</li>
-			</ul>
-		</div>
+	<div class="ly_section" id="app_dl">
+		<ul class="hp_effect_fade">
+			<li>
+				<img class="el_iphone_img" src="images/application_iphone.png">
+			</li>
+			<li>
+				<img class="hp_side_ttl_icon" src="images/application.png">	
+			</li>
+			<li>
+				<p>アプリなら、通知がくるから記録し忘れない。</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img class="hp_side_sub_ttl_icon" src="images/app_dl.png">
+			</li>
+			<li class="hp_h_arranged_img">
+				<a href="#"><img src="images/app_google.svg"></a>
+				<a href="#"><img src="images/app_apple.svg"></a>
+			</li>
+		</ul>
 	</div>
 	<div class="ly_footer">
 		<ul>

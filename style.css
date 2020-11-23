@@ -18,6 +18,13 @@ strong {
 	font-size: 1.2rem;
 }
 
+h1 {
+	font-size: 4rem;
+	letter-spacing: .2em;
+	line-height: 100px;
+	font-weight: 300;
+}
+
 h2 {
 	font-size: 2.5rem;
 	letter-spacing: .1em;
@@ -90,7 +97,7 @@ h3 img {
 	}
 
 	h3 {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		letter-spacing: .05em;
 		line-height: 30px;	
 	}
@@ -103,9 +110,9 @@ h3 img {
 		margin-bottom: 20px;	
 	}
 
-	h3 img {
-		width: 15px;
-		padding: 0 20px;
+	strong {
+		font-size: 1rem;
+		padding-bottom: 10px;
 	}
 }
 
@@ -113,27 +120,75 @@ h3 img {
 /* 共通レイアウト
 /* ================================================ */
 
-.ly_section {
+.ly_flex_section {
 	margin-top: 200px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.ly_innner__center {
+.ly_section {
+	padding: 200px 0;
 	margin: 0 auto;
 	text-align: center;
 }
 
+.ly_ttl_top {
+	padding: 60px 0;
+	text-align: center;
+}
+
+.ly_ttl_r {
+	padding-right: 50px;
+	width: 5%;
+}
+
+.ly_ttl_r img {
+	width: 25px;
+}
+
+.ly_cont_l {
+	padding-left: 50px;
+	width: 95%;
+}
+
 @media screen and (max-width: 768px){
-	.ly_section {
+	.ly_flex_section {
 		margin-top: 90px;
+	}
+
+	.ly_ttl_r {
+		padding-right: 40px;
+	}
+
+	.ly_ttl_r img {
+		width: 20px;
+	}
+
+	.ly_cont_l {
+		padding-left: 40px;
 	}
 }
 
 /* sp */
 @media screen and (max-width:640px){
-	.ly_section {
+	.ly_flex_section {
 		margin-top: 80px
+	}
+
+	.ly_section {
+		padding: 80px 0;
+	}
+
+	.ly_ttl_r {
+		padding-right: 20px;
+	}
+
+	.ly_ttl_r img {
+		width: 15px;
+	}
+
+	.ly_cont_l {
+		padding-left: 20px;
 	}
 }
 
@@ -324,34 +379,56 @@ h3 img {
     to { transform:scale(1) }
 }
 
-.ly_header_ttl {
-	padding: 30px;
+.bl_header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 80%;
-	height: 80vh;
+	width: 100%;
+	height: 100vh;
 }
 
-.ly_header_ttl img {
-	padding-top: 200px;
-	width: 400px;
+.bl_header_top {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 100;
 }
 
-.ly_header_ttl p {
-	padding-top: 50px;
-	color: #ffffff;
+.bl_header_top a {
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
 }
 
-.ly_header_r {
+.bl_header_top::before {
 	position: absolute;
-	bottom: 3%;
-	right: 3%;
-	float: right;
+	content: '';
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #cba671;
+    left: -60px;
+}
+
+.bl_header_ttl {
+	text-align: center;
+	padding-top: 200px;
+	padding-left: 50px;
 	color: #ffffff;
 }
 
-.ly_header_r:hover {
+.bl_header_ttl_img img {
+	width: 350px;
+}
+
+.bl_header_r {
+	position: absolute;
+	width: 30px;
+	bottom: 30px;
+	right: 150px;
+}
+
+.bl_header_r:hover {
 	animation: animationZoomInS 0.5s ease-out normal;
 	animation-fill-mode:forwards
 }
@@ -361,31 +438,22 @@ h3 img {
 }
 
 @media screen and (max-width: 768px){
-	.ly_header {
-	height: 100vh;
-	background-image: url("images/top_kv_pc_01.jpg");
-	background-size: cover; /*めいいっぱいに表示*/
-	background-position: center;
-	}
-
-	.ly_header_ttl img {
-		padding-top: 400px;
+	.bl_header_ttl img {
+		padding-top: 300px;
 		width: 300px;
 	}
 }
 
 /* sp */
 @media screen and (max-width:640px){
-	.ly_header {
-		height: 100vh;
-		background-image: url("images/top_kv_pc_01.jpg");
-		background-size: cover; /*めいいっぱいに表示*/
-		background-position: center;
+	.bl_header_ttl {
+		padding-left: 20px;
 	}
 
-	.ly_header_ttl img {
-		padding-top: 200px;
+	.bl_header_ttl img {
+		padding-top: 100px;
 		width: 80%;
+
 	}
 }
 
@@ -513,8 +581,7 @@ h3 img {
         transform: rotate(180deg);
         background: #f1f1f1;
     }
-    /*綺麗なエンゲージアニメーションは50.1%だったが50%にしたらいい感じになった...*/
-    50% {
+    50.1% {
         transform: rotate(360deg);
         background: #cba671;
     }
@@ -627,7 +694,8 @@ h3 img {
 }
 
 .article_slider img {
-	height: 50vh;
+	height: 70vh;
+	width: 80%;
 	border-radius: 20px;
 	object-fit: cover;
   	object-position: center;
@@ -644,6 +712,51 @@ h3 img {
 	.bl_garally {
 		padding: 0;
 		padding-right: 30px; 
+	}
+}
+
+/* ================================================ */
+/* 特徴
+/* ================================================ */
+
+.bl_img_unit {
+	display: flex;
+	justify-content: space-around;
+}
+
+.bl_img_unit ul {
+	width: 20%;
+}
+
+.bl_img_unit li:first-child {
+	height: 150px;
+}
+
+.bl_img_unit strong {
+	display: block;
+}
+
+.bl_img_unit img {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+}
+
+/* sp */
+@media screen and (max-width:640px){
+	.bl_img_unit {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.bl_img_unit li:first-child {
+		height: 120px;
+	}
+
+	.bl_img_unit ul {
+		margin: 0 auto;
+		width: 80%;
+		height: 300px;
 	}
 }
 
