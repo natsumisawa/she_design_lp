@@ -223,10 +223,6 @@ h3 img {
 /* ヘルパー
 /* ================================================ */
 
-.hp_padding_l {
-	padding-left: 50px !important;
-}
-
 .hp_effect_fade {
 	opacity: 0;
 	transform: translate(0, 45px);
@@ -250,12 +246,6 @@ h3 img {
 
 .hp_img__h_arranged img {
 	height: 50px;
-}
-
-@media screen and (max-width: 768px){
-	.hp_padding_l {
-		padding-left: 40px !important;
-	}
 }
 
 /* sp */
@@ -285,6 +275,7 @@ h3 img {
 
 .bl_media_body {
 	margin-top: 100px;
+	padding: 0 60px;
 }
 
 .bl_media_ttl {
