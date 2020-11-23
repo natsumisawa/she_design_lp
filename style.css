@@ -533,13 +533,13 @@ h3 img {
     display: block;
     position: absolute;
     top: 0;
-    left: -75px;
+    left: -50%;
     width: 150px;
     height: 150px;
     background: #f1f1f1;
-    transform-origin: right 75px;
+    transform-origin: right 50%;
     z-index: 2;
-    animation: rotate-circle-left 3s linear infinite;
+    animation: rotate-circle-left 3s ease-out infinite;
 }
 
 /*円の右に正方形を描く*/
@@ -548,28 +548,29 @@ h3 img {
     display: block;
     position: absolute;
     top: 0px;
-    left: 75px;
+    left: 50%;
     width: 150px;
     height: 150px;
     background: #f1f1f1;
-    transform-origin: left 75px;
+    transform-origin: left 50%;
     z-index: 3;
-    animation: rotate-circle-right 3s linear infinite;
+    animation: rotate-circle-right 3s cubic-bezier(0.4, 0, 1, 1) infinite;
 }
 
 .el_circle_icon_inner {
 	position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 140px;
-    height: 140px;
+    top: 2.5px;
+    left: 2.5px;
+    width: 145px;
+    height: 145px;
     background: #ffffff;
     border-radius: 50%;
     z-index: 4;
 }
 
-.el_circle_icon_inner img {
-	z-index: 5;	
+.el_circle_icon_inner h3 {
+	color: #cba671;
+	padding-top: 50px;
 }
 
 @keyframes rotate-circle-right {
@@ -671,10 +672,22 @@ h3 img {
 	}
 
 	.el_circle_icon_inner {
-	    top: 5px;
-	    left: 5px;
-	    width: 90px;
-	    height: 90px;
+	    top: 2.5px;
+	    left: 2.5px;
+	    width: 95px;
+	    height: 95px;
+	}
+
+	/*円の左に正方形を描く*/
+	.el_circle_icon_wrapper::before {
+	    width: 100px;
+	    height: 100px;
+	}
+
+	/*円の右に正方形を描く*/
+	.el_circle_icon_wrapper::after {
+	    width: 100px;
+	    height: 100px;
 	}
 }
 
