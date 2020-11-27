@@ -29,6 +29,15 @@ $('.header_slider').slick({
 	autoplaySpeed: 5000,
 	speed: 1000,
 	arrows: false,
+	responsive: [	
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					autoplay: false,
+				}
+			}
+		]
 });
 });
 

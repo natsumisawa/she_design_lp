@@ -535,6 +535,14 @@ h3 img {
 
 /* sp */
 @media screen and (max-width:640px){
+	.slider_img_1 {
+		animation: none;
+	}
+
+	.slider_img_2 {
+		animation: none;
+	}
+
 	.ly_header_ttl {
 		padding-left: 20px;
 	}
